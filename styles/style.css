@@ -19,10 +19,16 @@ body{
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
+    padding-bottom: 50px;
 }
 .animalscont{
+    max-width: 390px;
     width: 80%;
     margin: 0 auto;
+    margin-top: 200px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(4,1fr);
 
 }
 h1{
