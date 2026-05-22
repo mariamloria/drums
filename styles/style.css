@@ -14,10 +14,9 @@
 body{
     width: 100%;
     height: 100vh;
-    overflow: hidden;
     background-image: url(../assets/img/background.jpg);
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
     background-attachment: fixed;
     background-position: center;
 }
@@ -48,7 +47,7 @@ h1 a{
     border-radius: 20px;
     border: 5px solid rgb(209, 196, 196);
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
     background-position: center;
 }
 .d{
@@ -71,4 +70,22 @@ h1 a{
 }
 .a{
     background-image: url(../assets/img/angry-cat.png);
+}
+@media only screen and (max-width:390px){
+    h1{
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 20px;
+        border-radius: 20px;
+    }
+    .animal{
+        color: rgba(0, 0, 0, 0);
+
+    }
+    .animalscont.flex{
+        flex-wrap: wrap;
+
+    }
+    .animalscont{
+        margin-top: 0;
+    }
 }
