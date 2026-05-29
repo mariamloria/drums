@@ -49,6 +49,7 @@ h1 a{
     width: 150px;
     height: 150px;
     font-size: 50px;
+    overflow: hidden;
     background-color: rgba(255, 255, 255, 0.699);
     border-radius: 20px;
     border: 5px solid rgb(209, 196, 196);
@@ -56,7 +57,15 @@ h1 a{
     background-size: cover;
     background-position: center;
 }
-.d{
+.animal img{
+    width: 100%;
+}
+.aboutanimals{
+    text-align: center;
+    font-size: 24px;
+}
+
+/* .d{
     background-image: url(../assets/img/dog.webp);
 }
 .p{
@@ -76,7 +85,23 @@ h1 a{
 }
 .a{
     background-image: url(../assets/img/angry-cat.png);
+} */
+
+/* about styles */
+
+.aboutaniamlscont article{
+    background-color: rgba(255,255,255,0.5);
+    margin:20px;
 }
+.aboutaniamlscont div{
+    width: 50%;
+    height: auto;
+    overflow: hidden;
+}
+.aboutaniamlscont section{
+    width: 45%;
+}
+
 @media only screen and (max-width:390px){
     h1{
         background-color: rgba(0, 0, 0, 0.5);
@@ -93,5 +118,11 @@ h1 a{
     }
     .animalscont{
         margin-top: 0;
+    }
+    .aboutaniamlscont article.flex{
+    flex-direction: column;
+    }
+    .aboutaniamlscont div, .aboutaniamlscont section{
+        width: 45%;
     }
 }

@@ -1,6 +1,3 @@
-// შექმნა მასივი
-let animals = document.querySelectorAll(".animal");
-
 let sheetid = "1kNTGU5gjaT1vFuD2wBzjPkTgx0jlC1r_BjuLV4BVsRQ";
 let base = `https://docs.google.com/spreadsheets/d/${sheetid}/gviz/tq`;
 let sheetname = "about";
@@ -28,14 +25,12 @@ function init(){
             image: row.c[2]?.v,
             sound: row.c[3]?.v
         }
-        playsound(animal);
+        createAnimal(animal);
     });
     
     })
     
 }
-
-
 document.addEventListener("keydown", function(a){
     let soundsrc;
     if(a.key == "d" || a.key == "D"){
@@ -72,5 +67,22 @@ function playsound(animal){
             sound.play();
 }
 
+function createAnimal(animal){
+
+    let div = document.createElement("div");
+    let img = document.createElement("img");
+    
+    img.setAttribute("src", "assets/img/" + animal.image);
+    div.classList = "flex animal " + animal.image.slice(0,1);
+
+    div.appendChild(img);
 
 
+    div.addEventListener("click", function(){
+
+        playsound(animal);
+
+    });
+
+    document.getElementById("animalscont").appendChild(div);
+}
